@@ -52,7 +52,7 @@ export default class AddNote extends React.Component {
             name: this.state.name.value,
             modified: this.state.modified,
             content: this.state.content.value,
-            folder_id: this.state.folder_id.value
+            folderId: this.state.folder_id.value
         }
         const url = config.API_ENDPOINT + '/notes';
         
