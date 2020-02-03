@@ -73,8 +73,8 @@ export default class AddFolder extends React.Component {
                 onSubmit = {(e) => this.handleSubmit(e)}>
                 <NotefulError>
                     <h2>Create a new folder!</h2>
+                    <label htmlFor="name">Folder Name *</label>
                     <div className="folderCreation__hint">* required field</div>
-                    <label htmlFor="name">Folder Name *</label> 
                     <input 
                         type = "text" 
                         className = "folderCreation"

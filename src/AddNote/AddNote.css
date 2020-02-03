@@ -36,3 +36,8 @@ a.noteCreation_button {
 .noteCreation_button:hover {
     cursor: pointer;
 }
+
+.registration__hint {
+    color: red;
+    font-size: 10pt;
+}

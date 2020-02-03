@@ -90,8 +90,10 @@ export default class AddNote extends React.Component {
 
     validateFolderId() {
         const folderOption = this.state.folder_id.value;
-        if (folderOption === null) {
-            return 'Picking a folder is required'
+        if (folderOption === '1') {
+            return 'Picking a folder is required';
+        } else if (folderOption === '2') {
+            return 'Please choose a folder';
         }
     }
 
@@ -121,8 +123,8 @@ export default class AddNote extends React.Component {
                 onSubmit = {(e) => this.handleSubmit(e)}>
                 <NotefulError>
                     <h2>Create a new note!</h2>
+                    <label htmlFor="name">Note Name *</label>
                     <div className="registration__hint">* required field</div>
-                    <label htmlFor="name">Note Name *</label> 
                     <input 
                         type = "text" 
                         className = "noteCreation" 
@@ -132,12 +134,14 @@ export default class AddNote extends React.Component {
                         <ValidationError message = {nameError}/>
                     )}
                     <label className = "select" htmlFor = "folderSelect">Pick a folder *</label>
+                    <div className="registration__hint">* required field</div>
                     <Dropdown 
                         updateFolderId = {this.updateFolderId}/>
                     {this.state.folder_id.touched && (   
                         <ValidationError folder_idError = {folder_idError}/>
                     )} 
-                    <label className = "contentText" htmlFor = "Content">Note Content *</label> 
+                    <label className = "contentText" htmlFor = "Content">Note Content *</label>
+                    <div className="registration__hint">* required field</div>
                     <input 
                         type = "text" 
                         className = "noteContentCreation"

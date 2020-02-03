@@ -28,3 +28,8 @@ a.folderCreation_button {
 .folderCreation_button:hover {
     cursor: pointer;
 }
+
+.folderCreation__hint {
+    color: red;
+    font-size: 10pt;
+}
